@@ -7,7 +7,7 @@ from urllib.request import urlopen as uReq
 app = Flask(__name__)
 
 @app.route('/',methods=['GET'])  # route to display the home page
-@cross_origin()
+@cross_origin()     #This is used since we are host our application in cloud
 def homePage():
     return render_template("index.html")
 
@@ -79,5 +79,5 @@ def index():
         return render_template('index.html')
 
 if __name__ == "__main__":
-    #app.run(host='127.0.0.1', port=8001, debug=True)
+    #app.run(host='127.0.0.1', port=8001, debug=True)   # this is for local host
 	app.run(debug=True)

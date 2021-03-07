@@ -11,18 +11,18 @@
 3.  After this 'Logged in' message, open a new tab and go to this link 'https://dashboard.heroku.com/apps'. On the right hand side you'll get 'New' button for creating new app.
      select new app.
 	 
-	 Add your app name in their like 'review ineuron' and keep the region as 'United states' . Then hit create app. Now you'll get the commands how to deploy your app in heroku.
+	 Add your app name in their like '<application name>' and keep the region as 'United states' . Then hit create app. Now you'll get the commands how to deploy your app in heroku.
 	 
-4. Create new env with this command 'conda create -n test python=3.7'
+4. Create new env with this command 'conda create -n <env name> python=3.7'
 
 5. Now we can see in the page first two steps we have done already, we installed heroku cli and created our accounts also. Now moving on to third step.
     
-	a). First move our path where our project is available. like my project is in reviewFlask folder then i write below command in terminal.
-	     cd /Desktop/rev/HerokuFlaskDemo/reviewFlask
-		 
-	b} Now we initialize our git with this command 'git init'
+	a). First move our path where our project is available. like my project is in ReviewScrapper folder then i write below command in terminal.
+	     cd /Desktop/rev/HerokuFlaskDemo/ReviewScrapper
+		 [use pip install -r requirements.txt to get all the libraries to the environment. It is not mandatory since we are hosting the app in cloud]
+	b) Now we initialize our git with this command 'git init'
 	c). Then we check the status of git with this command 'git status'. to check the status of the git.
-	d). Then type this command for add our heroku app repository, 'heroku git:remote -a rev-ineuron'.
+	d). Then type this command for add our heroku app repository, 'heroku git:remote -a <application name>'.
 	e). Now we're adding our local files in git with this command 'git add .' (i.e we have a dot after git add, don't forget to add dot in that command)
     f)  Now we commit our repository from this command, git commit -am "first-commit"
 	
@@ -36,3 +36,4 @@
 7. After deployment is done. We get a deployed link at bottom, we just need to copy that link and paste in browser.
   
   
+Note: This is the process to deploy the code from local to cloud(heroku) using heroku cli. We can also push our code from GIT to Heroku without CLI in an other way.
